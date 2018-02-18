@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const secret = require('../../SECRET').secretkey;
+const secret = process.env.secretkey || require('../../SECRET').secretkey;
 const jwt = require('jsonwebtoken');
 
 router.get('/webhook', (req, res) => {

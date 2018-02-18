@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
 const User = require('mongoose').model('User');
 const isDev = process.env.NODE_ENV !== 'production';
-const secret = isDev ? require('../../SECRET').secretkey : '';
-const thisisacomplexkeyword = isDev ? secret : process.env.COMPLEX_HASH_LETTERS;
+const secret = isDev ? require('../../SECRET').secretkey : process.env.secretkey;
+const thisisacomplexkeyword = isDev ? secret : process.env.secretkey;
 /**
  *  The Auth Checker middleware function.
  */

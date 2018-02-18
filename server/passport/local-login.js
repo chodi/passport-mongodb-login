@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken');
 const User = require('mongoose').model('User');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const secret = isDev ? require('../../SECRET').secretkey : '';
-const thisisacomplexkeyword = secret || process.env.COMPLEX_HASH_LETTERS;
+const secret = isDev ? require('../../SECRET').secretkey : process.env.secretkey;
+const thisisacomplexkeyword = secret || process.env.secretkey;
 const PassportLocalStrategy = require('passport-local').Strategy;
 
 
