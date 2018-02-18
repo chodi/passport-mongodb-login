@@ -53,13 +53,13 @@ const login = require('./routes/login');
 const logout = require('./routes/logout');
 // const todo = require('./routes/todo');
 // const facebook = require('./routes/facebook');
-const todoDStore = require('./routes/api/todo');
+// const todoDStore = require('./routes/api/todo');
 
 app.use('/auth', authRoutes(passport));
 app.use('/', index);
 app.use('/login', login);
 app.use('/logout', logout);
-app.use('/api/todo', todoDStore);
+// app.use('/api/todo', todoDStore);
 // app.use('/todo', todo);
 // app.use('/facebook', facebook);
 
